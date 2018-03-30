@@ -1,0 +1,43 @@
+{
+  "name": "firebasechat",
+  "version": "1.0.0",
+  "description": "chat application",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "nodemon -w src --exec \"babel-node src --presets es2015,stage-0\"",
+    "build": "babel src -s -D -d dist --presets es2015,stage-0",
+    "start": "node dist",
+    "prestart": "npm run -s build",
+    "precommit": "newman run postman.json -e env.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Amir1411/firebaseChat.git"
+  },
+  "author": "Mohd Amir <md.amir14@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Amir1411/firebaseChat/issues"
+  },
+  "homepage": "https://github.com/Amir1411/firebaseChat#readme",
+  "dependencies": {
+    "body-parser": "*",
+    "cors": "*",
+    "express": "*",
+    "md5": "*",
+    "multer": "*",
+    "nodemailer": "*",
+    "nodemailer-smtp-transport": "*",
+    "nodemon": "*",
+    "twilio": "*",
+    "util": "*"
+  },
+  "devDependencies": {
+    "babel-cli": "*",
+    "babel-core": "*",
+    "babel-eslint": "*",
+    "babel-preset-es2015": "*",
+    "babel-preset-stage-0": "*",
+    "nodemon": "*"
+  }
+}
